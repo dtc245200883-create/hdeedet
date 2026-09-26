@@ -1,0 +1,23 @@
+# 1. Sửa index.html -> Commit
+echo "<p>Thêm đoạn văn mới</p>" >> index.html
+git add index.html
+git commit -m "Update html content"
+
+# 2. Tạo script.js -> Commit
+echo "console.log('Hello Git');" > script.js
+git add script.js
+git commit -m "Add javascript file"
+
+# 3. Sửa style.css và notes.txt -> Commit cả 2
+echo "h1 { color: blue; }" >> style.css
+echo "Update thêm ghi chú" >> notes.txt
+git add style.css notes.txt
+git commit -m "Update style and notes"
+
+# 4. Xem lịch sử rút gọn (Chụp ảnh 1)
+git log --oneline
+
+# 5. Xem chi tiết nội dung thay đổi commit gần nhất (Chụp ảnh 2)
+git show HEAD
+# Hoặc xem diff với commit kế trước:
+git diff HEAD~1 HEAD
